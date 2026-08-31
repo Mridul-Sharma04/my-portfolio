@@ -1,0 +1,2104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mridul Sharma | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+
+    :root {
+      --primary: #0066cc;
+      --primary-dark: #004d99;
+      --accent-cyan: #00bcd4;
+      --accent-purple: #7c4dff;
+      --accent-gold: #f59e0b;
+      --accent-green: #10b981;
+
+      --bg-dark: #0b1120;
+      --bg-card: #151f32;
+      --bg-card-border: rgba(255, 255, 255, 0.08);
+
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+
+      --gradient-title: linear-gradient(
+        135deg,
+        #38bdf8 0%,
+        #818cf8 50%,
+        #c084fc 100%
+      );
+    }
+
+
+    /* ---------------- GENERAL ---------------- */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+
+    /* ---------------- NAVIGATION ---------------- */
+
+    nav {
+      background: rgba(11, 17, 32, 0.9);
+      backdrop-filter: blur(12px);
+
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      border-bottom: 1px solid var(--bg-card-border);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 1rem 5%;
+    }
+
+
+    nav .brand {
+      font-family: 'Fira Code', monospace;
+      font-weight: 700;
+      font-size: 1.25rem;
+
+      color: #38bdf8;
+
+      text-decoration: none;
+    }
+
+
+    nav ul {
+      list-style: none;
+
+      display: flex;
+      gap: 1.5rem;
+
+      align-items: center;
+    }
+
+
+    nav ul li a {
+      color: var(--text-muted);
+
+      text-decoration: none;
+
+      font-weight: 500;
+      font-size: 0.95rem;
+
+      transition: color 0.3s;
+    }
+
+
+    nav ul li a:hover {
+      color: #38bdf8;
+    }
+
+
+    .btn-contact {
+      background: linear-gradient(
+        135deg,
+        #0284c7,
+        #6366f1
+      );
+
+      color: white !important;
+
+      padding: 0.5rem 1.2rem;
+
+      border-radius: 20px;
+
+      font-weight: 600;
+
+      text-decoration: none;
+
+      transition: transform 0.2s;
+    }
+
+
+    .btn-contact:hover {
+      transform: translateY(-2px);
+    }
+
+
+    /* ---------------- HERO SECTION ---------------- */
+
+    .hero {
+      padding: 5rem 5% 4rem;
+
+      text-align: center;
+
+      background: radial-gradient(
+        circle at center top,
+        #1e293b 0%,
+        var(--bg-dark) 70%
+      );
+    }
+
+
+    .badge-student {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 0.5rem;
+
+      background: rgba(56, 189, 248, 0.1);
+
+      border: 1px solid rgba(56, 189, 248, 0.3);
+
+      color: #38bdf8;
+
+      padding: 0.4rem 1rem;
+
+      border-radius: 30px;
+
+      font-size: 0.85rem;
+
+      font-weight: 600;
+
+      margin-bottom: 1.2rem;
+    }
+
+
+    .hero h1 {
+      font-size: 3.2rem;
+
+      font-weight: 800;
+
+      background: var(--gradient-title);
+
+      -webkit-background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+
+      margin-bottom: 0.5rem;
+    }
+
+
+    .hero p.tagline {
+      font-size: 1.25rem;
+
+      color: #94a3b8;
+
+      max-width: 700px;
+
+      margin: 0 auto 2rem;
+    }
+
+
+    .metrics-row {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 1rem;
+
+      margin-bottom: 2.5rem;
+    }
+
+
+    .metric-chip {
+      background: var(--bg-card);
+
+      border: 1px solid var(--bg-card-border);
+
+      padding: 0.6rem 1.2rem;
+
+      border-radius: 12px;
+
+      font-size: 0.9rem;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 0.5rem;
+    }
+
+
+    .metric-chip i {
+      color: #38bdf8;
+    }
+
+
+    /* ---------------- SECTION COMMON ---------------- */
+
+    section {
+      padding: 4rem 5%;
+
+      max-width: 1200px;
+
+      margin: 0 auto;
+    }
+
+
+    .section-title {
+      font-size: 2rem;
+
+      font-weight: 700;
+
+      color: #f8fafc;
+
+      margin-bottom: 0.5rem;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 0.75rem;
+    }
+
+
+    .section-desc {
+      color: var(--text-muted);
+
+      margin-bottom: 2.5rem;
+    }
+
+
+    /* ---------------- GRID & CARDS ---------------- */
+
+    .grid-2 {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+      gap: 2rem;
+    }
+
+
+    .grid-3 {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+      gap: 1.5rem;
+    }
+
+
+    .card {
+      background: var(--bg-card);
+
+      border: 1px solid var(--bg-card-border);
+
+      border-radius: 16px;
+
+      padding: 1.8rem;
+
+      transition:
+        transform 0.3s,
+        border-color 0.3s;
+    }
+
+
+    .card:hover {
+      transform: translateY(-4px);
+
+      border-color:
+        rgba(56, 189, 248, 0.4);
+    }
+
+
+    /* ---------------- EDUCATION TIMELINE ---------------- */
+
+    .timeline-item {
+      border-left: 2px solid #0284c7;
+
+      padding-left: 1.5rem;
+
+      margin-bottom: 1.8rem;
+
+      position: relative;
+    }
+
+
+    .timeline-item::before {
+      content: '';
+
+      position: absolute;
+
+      left: -7px;
+
+      top: 4px;
+
+      width: 12px;
+
+      height: 12px;
+
+      border-radius: 50%;
+
+      background: #38bdf8;
+    }
+
+
+    .timeline-date {
+      font-size: 0.85rem;
+
+      color: #38bdf8;
+
+      font-weight: 600;
+
+      font-family: 'Fira Code', monospace;
+    }
+
+
+    .timeline-school {
+      font-size: 1.15rem;
+
+      font-weight: 700;
+
+      margin-top: 0.2rem;
+    }
+
+
+    .pill-score {
+      display: inline-block;
+
+      margin-top: 0.4rem;
+
+      background:
+        rgba(16, 185, 129, 0.15);
+
+      color: #34d399;
+
+      border:
+        1px solid rgba(16, 185, 129, 0.3);
+
+      padding: 0.2rem 0.6rem;
+
+      border-radius: 6px;
+
+      font-size: 0.85rem;
+
+      font-weight: 600;
+    }
+
+
+    /* ---------------- SKILLS ---------------- */
+
+    .skill-category {
+      margin-bottom: 1.5rem;
+    }
+
+
+    .skill-category h4 {
+      color: #38bdf8;
+
+      font-size: 1rem;
+
+      margin-bottom: 0.8rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+    }
+
+
+    .tags-container {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 0.6rem;
+    }
+
+
+    .tag {
+      background:
+        rgba(255, 255, 255, 0.05);
+
+      border:
+        1px solid var(--bg-card-border);
+
+      padding: 0.4rem 0.9rem;
+
+      border-radius: 8px;
+
+      font-size: 0.9rem;
+
+      color: #e2e8f0;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 0.4rem;
+
+      transition:
+        background 0.2s,
+        border-color 0.2s;
+    }
+
+
+    .tag:hover {
+      background:
+        rgba(56, 189, 248, 0.15);
+
+      border-color:
+        rgba(56, 189, 248, 0.4);
+    }
+
+
+    /* ---------------- PROJECTS ---------------- */
+
+    .project-card h3 {
+      font-size: 1.3rem;
+
+      margin-top: 0.4rem;
+
+      margin-bottom: 0.8rem;
+    }
+
+
+    .project-tag {
+      font-family: 'Fira Code', monospace;
+
+      font-size: 0.8rem;
+
+      color: #38bdf8;
+
+      background:
+        rgba(56, 189, 248, 0.1);
+
+      padding: 0.2rem 0.6rem;
+
+      border-radius: 4px;
+    }
+
+
+    .project-date {
+      float: right;
+
+      font-size: 0.8rem;
+
+      color: var(--text-muted);
+    }
+
+
+    .project-list {
+      list-style: none;
+
+      margin-top: 0.8rem;
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 0.5rem;
+    }
+
+
+    .project-list li {
+      font-size: 0.9rem;
+
+      color: #cbd5e1;
+
+      position: relative;
+
+      padding-left: 1.2rem;
+    }
+
+
+    .project-list li::before {
+      content: '▹';
+
+      position: absolute;
+
+      left: 0;
+
+      color: #38bdf8;
+    }
+
+
+    /* ---------------- CERTIFICATES ---------------- */
+
+    .cert-card {
+      text-align: center;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+    }
+
+
+    .cert-img-box {
+      width: 100%;
+
+      height: 220px;
+
+      background:
+        rgba(0, 0, 0, 0.25);
+
+      border:
+        1px dashed rgba(56, 189, 248, 0.35);
+
+      border-radius: 12px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      overflow: hidden;
+
+      margin-bottom: 1.2rem;
+
+      padding: 6px;
+
+      box-sizing: border-box;
+
+      transition: border-color 0.3s;
+    }
+
+
+    .cert-card:hover .cert-img-box {
+      border-color: #38bdf8;
+    }
+
+
+    .cert-img-box img {
+      width: 100%;
+
+      height: 100%;
+
+      max-height: 206px;
+
+      object-fit: contain;
+
+      object-position: center;
+
+      border-radius: 6px;
+
+      display: block;
+
+      transition: transform 0.3s ease;
+    }
+
+
+    .cert-card:hover .cert-img-box img {
+      transform: scale(1.03);
+    }
+
+
+    .cert-placeholder {
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: var(--text-muted);
+
+      gap: 0.4rem;
+
+      padding: 1rem;
+    }
+
+
+    .cert-placeholder i {
+      font-size: 2.2rem;
+
+      color: #38bdf8;
+    }
+
+
+    .cert-placeholder span {
+      font-size: 0.95rem;
+
+      font-weight: 600;
+
+      color: var(--text-main);
+    }
+
+
+    .cert-placeholder small {
+      font-size: 0.78rem;
+
+      color: #64748b;
+
+      font-family: 'Fira Code', monospace;
+    }
+
+
+    .cert-issuer {
+      display: inline-block;
+
+      font-family: 'Fira Code', monospace;
+
+      font-size: 0.8rem;
+
+      color: #38bdf8;
+
+      background:
+        rgba(56, 189, 248, 0.1);
+
+      padding: 0.2rem 0.6rem;
+
+      border-radius: 4px;
+
+      margin-bottom: 0.5rem;
+    }
+
+
+    /* ---------------- CONTACT ---------------- */
+
+    .contact-links {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 1rem;
+
+      margin-top: 1.5rem;
+    }
+
+
+    .contact-btn {
+      background: var(--bg-card);
+
+      border:
+        1px solid var(--bg-card-border);
+
+      color: #f8fafc;
+
+      padding: 0.8rem 1.4rem;
+
+      border-radius: 10px;
+
+      text-decoration: none;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 0.6rem;
+
+      transition: all 0.3s;
+    }
+
+
+    .contact-btn:hover {
+      border-color: #38bdf8;
+
+      background:
+        rgba(56, 189, 248, 0.1);
+
+      transform: translateY(-2px);
+    }
+
+
+    /* ---------------- FOOTER ---------------- */
+
+    footer {
+      border-top:
+        1px solid var(--bg-card-border);
+
+      text-align: center;
+
+      padding: 2rem;
+
+      color: var(--text-muted);
+
+      font-size: 0.9rem;
+    }
+
+
+    /* ---------------- MOBILE ---------------- */
+
+    @media (max-width: 768px) {
+
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav>
+
+    <a href="#" class="brand">
+      &lt;Mridul.dev /&gt;
+    </a>
+
+    <ul>
+
+      <li>
+        <a href="#about">
+          About & Edu
+        </a>
+      </li>
+
+      <li>
+        <a href="#skills">
+          Skills
+        </a>
+      </li>
+
+      <li>
+        <a href="#projects">
+          Projects
+        </a>
+      </li>
+
+      <li>
+        <a href="#certificates">
+          Certificates
+        </a>
+      </li>
+
+      <li>
+        <a href="#achievements">
+          Achievements
+        </a>
+      </li>
+
+      <li>
+        <a href="#contact" class="btn-contact">
+          Contact
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+
+
+  <!-- ================= HERO ================= -->
+
+  <header class="hero">
+
+    <div class="badge-student">
+
+      <i class="fa-solid fa-graduation-cap"></i>
+
+      2nd Year B.Tech CSE @ LPU
+
+    </div>
+
+
+    <h1>
+      Hello, I'm Mridul Sharma
+    </h1>
+
+
+    <p class="tagline">
+
+      Flutter & Dart Mobile Developer |
+      Python & C++ Programmer |
+      Smart Automation Enthusiast
+
+    </p>
+
+
+    <div class="metrics-row">
+
+
+      <!-- CGPA -->
+
+      <div class="metric-chip">
+
+        <i class="fa-solid fa-star"></i>
+
+        LPU CGPA:
+        <strong>8.2</strong>
+
+      </div>
+
+
+      <!-- 12th -->
+
+      <div class="metric-chip">
+
+        <i class="fa-solid fa-award"></i>
+
+        12th PCM:
+        <strong>90%</strong>
+
+      </div>
+
+
+      <!-- Projects -->
+
+      <div class="metric-chip">
+
+        <i class="fa-solid fa-code"></i>
+
+        Projects:
+        <strong>3</strong>
+
+      </div>
+
+
+      <!-- Certifications -->
+
+      <div class="metric-chip">
+
+        <i class="fa-solid fa-certificate"></i>
+
+        Certifications:
+        <strong>3</strong>
+
+      </div>
+
+
+    </div>
+
+  </header>
+
+
+
+  <!-- ================= ABOUT & EDUCATION ================= -->
+
+  <section id="about">
+
+
+    <h2 class="section-title">
+
+      <i
+        class="fa-solid fa-user-graduate"
+        style="color: #38bdf8;">
+      </i>
+
+      About & Education
+
+    </h2>
+
+
+    <p class="section-desc">
+
+      Academic background and core competencies.
+
+    </p>
+
+
+    <div class="grid-2">
+
+
+      <!-- ABOUT -->
+
+      <div class="card">
+
+
+        <h3 style="margin-bottom: 1rem;">
+
+          Who I Am
+
+        </h3>
+
+
+        <p
+          style="
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+          "
+        >
+
+          I am a 2nd-year Bachelor of Technology
+          student in Computer Science & Engineering
+          at <strong>Lovely Professional University,
+          Phagwara</strong>.
+
+          Passionate about cross-platform app
+          development, algorithms in C++, and
+          intelligent hardware automation.
+
+        </p>
+
+
+        <h4
+          style="
+            color: #38bdf8;
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+          "
+        >
+
+          Soft Skills
+
+        </h4>
+
+
+        <div class="tags-container">
+
+
+          <span class="tag">
+
+            <i class="fa-solid fa-brain"></i>
+
+            Problem-Solving
+
+          </span>
+
+
+          <span class="tag">
+
+            <i class="fa-solid fa-people-group"></i>
+
+            Team Player
+
+          </span>
+
+
+          <span class="tag">
+
+            <i class="fa-solid fa-diagram-project"></i>
+
+            Project Management
+
+          </span>
+
+
+          <span class="tag">
+
+            <i class="fa-solid fa-sliders"></i>
+
+            Adaptability
+
+          </span>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- EDUCATION -->
+
+      <div class="card">
+
+
+        <h3 style="margin-bottom: 1.2rem;">
+
+          Education Timeline
+
+        </h3>
+
+
+        <!-- LPU -->
+
+        <div class="timeline-item">
+
+
+          <span class="timeline-date">
+
+            Aug 2025 – Present
+
+          </span>
+
+
+          <div class="timeline-school">
+
+            Lovely Professional University
+
+          </div>
+
+
+          <p
+            style="
+              color: #94a3b8;
+              font-size: 0.9rem;
+            "
+          >
+
+            Bachelor of Technology,
+            CSE (AI and ML) • Phagwara, Punjab
+
+          </p>
+
+
+          <span class="pill-score">
+
+            CGPA: 8.2
+
+          </span>
+
+
+        </div>
+
+
+
+        <!-- 12TH -->
+
+        <div class="timeline-item">
+
+
+          <span class="timeline-date">
+
+            Mar 2024 – May 2025
+
+          </span>
+
+
+          <div class="timeline-school">
+
+            ST D.R PUBLIC SEN. SEC. SCHOOL
+
+          </div>
+
+
+          <p
+            style="
+              color: #94a3b8;
+              font-size: 0.9rem;
+            "
+          >
+
+            Intermediate (PCM) • Una,
+            Himachal Pradesh
+
+          </p>
+
+
+          <span class="pill-score">
+
+            Percentage: 90%
+
+          </span>
+
+
+        </div>
+
+
+
+        <!-- 10TH -->
+
+        <div
+          class="timeline-item"
+          style="margin-bottom: 0;"
+        >
+
+
+          <span class="timeline-date">
+
+            Mar 2022 – May 2023
+
+          </span>
+
+
+          <div class="timeline-school">
+
+            ST D.R PUBLIC SEN. SEC. SCHOOL
+
+          </div>
+
+
+          <p
+            style="
+              color: #94a3b8;
+              font-size: 0.9rem;
+            "
+          >
+
+            Matriculation • Una,
+            Himachal Pradesh
+
+          </p>
+
+
+          <span class="pill-score">
+
+            Percentage: 97%
+
+          </span>
+
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= SKILLS ================= -->
+
+  <section id="skills">
+
+
+    <h2 class="section-title">
+
+      <i
+        class="fa-solid fa-code"
+        style="color: #818cf8;"
+      ></i>
+
+      Technical Skills
+
+    </h2>
+
+
+    <p class="section-desc">
+
+      Languages, technologies, and developer tools
+      from my CV.
+
+    </p>
+
+
+    <div class="card">
+
+
+      <!-- PROGRAMMING LANGUAGES -->
+
+      <div class="skill-category">
+
+
+        <h4>
+
+          Programming Languages
+
+        </h4>
+
+
+        <div class="tags-container">
+
+
+          <span class="tag">
+
+            <i class="fa-solid fa-code"></i>
+
+            C++
+
+          </span>
+
+
+          <span class="tag">
+
+            <i class="fa-brands fa-python"></i>
+
+            Python
+
+          </span>
+
+
+          <span class="tag">
+
+            <i class="fa-solid fa-terminal"></i>
+
+            C
+
+          </span>
+
+
+          <span class="tag">
+
+            <i class="fa-brands fa-js"></i>
+
+            JavaScript
+
+          </span>
+
+
+          <span class="tag">
+
+            <i class="fa-solid fa-mobile-screen"></i>
+
+            DART
+
+          </span>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- TECHNOLOGIES -->
+
+      <div
+        class="skill-category"
+        style="margin-bottom: 0;"
+      >
+
+
+        <h4>
+
+          Technologies & Frameworks
+
+        </h4>
+
+
+        <div class="tags-container">
+
+
+          <span class="tag">
+
+            <i class="fa-solid fa-database"></i>
+
+            SQL
+
+          </span>
+
+
+          <span class="tag">
+
+            <i class="fa-brands fa-git-alt"></i>
+
+            Git
+
+          </span>
+
+
+          <span class="tag">
+
+            <i class="fa-brands fa-github"></i>
+
+            GitHub
+
+          </span>
+
+
+          <span class="tag">
+
+            <i class="fa-brands fa-html5"></i>
+
+            HTML5
+
+          </span>
+
+
+          <span class="tag">
+
+            <i class="fa-brands fa-css3-alt"></i>
+
+            CSS3
+
+          </span>
+
+
+          <span class="tag">
+
+            <i class="fa-solid fa-layer-group"></i>
+
+            Flutter
+
+          </span>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= PROJECTS ================= -->
+
+  <section id="projects">
+
+
+    <h2 class="section-title">
+
+      <i
+        class="fa-solid fa-folder-open"
+        style="color: #38bdf8;"
+      ></i>
+
+      Featured Projects
+
+    </h2>
+
+
+    <p class="section-desc">
+
+      Projects built and documented on CV.
+
+    </p>
+
+
+    <div class="grid-3">
+
+
+
+      <!-- PROJECT 1 -->
+
+      <div class="card project-card">
+
+
+        <span class="project-tag">
+
+          HTML / CSS / JavaScript
+
+        </span>
+
+
+        <span class="project-date">
+
+          2026
+
+        </span>
+
+
+        <h3>
+
+          To-Do List App
+
+        </h3>
+
+
+        <ul class="project-list">
+
+
+          <li>
+
+            Simple task management application
+            for adding, editing, and deleting
+            daily tasks.
+
+          </li>
+
+
+          <li>
+
+            Users can mark tasks as completed
+            and keep track of their pending
+            activities.
+
+          </li>
+
+
+          <li>
+
+            Built with a clean and responsive
+            interface using basic web
+            development technologies.
+
+          </li>
+
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- PROJECT 2 -->
+
+      <div class="card project-card">
+
+
+        <span class="project-tag">
+
+          ECE / C++ & Python
+
+        </span>
+
+
+        <span class="project-date">
+
+          Mar 2026
+
+        </span>
+
+
+        <h3>
+
+          Smart Rooftop
+
+        </h3>
+
+
+        <ul class="project-list">
+
+
+          <li>
+
+            Automated device control
+            (lights/fans) using real-time
+            sensor logic to improve energy
+            efficiency.
+
+          </li>
+
+
+          <li>
+
+            Web/mobile interface data
+            visualization and monitoring
+            dashboard.
+
+          </li>
+
+
+          <li>
+
+            Software logic developed with
+            C/C++ and Python for sensor
+            integration and real-time decisions.
+
+          </li>
+
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- PROJECT 3 -->
+
+      <div class="card project-card">
+
+
+        <span class="project-tag">
+
+          Python
+
+        </span>
+
+
+        <span class="project-date">
+
+          Sep 2025 – Feb 2026
+
+        </span>
+
+
+        <h3>
+
+          Python Mini Projects Suite
+
+        </h3>
+
+
+        <ul class="project-list">
+
+
+          <li>
+
+            Password generator creating secure
+            random passwords using built-in
+            libraries.
+
+          </li>
+
+
+          <li>
+
+            Arithmetic calculator with
+            comprehensive error handling
+            for arithmetic operations.
+
+          </li>
+
+
+        </ul>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= CERTIFICATIONS ================= -->
+
+  <section id="certificates">
+
+
+    <h2 class="section-title">
+
+      <i
+        class="fa-solid fa-award"
+        style="color: #38bdf8;"
+      ></i>
+
+      Certifications
+
+    </h2>
+
+
+    <p class="section-desc">
+
+      Official course certifications with
+      dedicated image frames.
+
+    </p>
+
+
+    <div class="grid-3">
+
+
+
+      <!-- CERTIFICATE 1 -->
+
+      <div class="card cert-card">
+
+
+        <div class="cert-img-box">
+
+
+          <img
+            src="infosys.png"
+            alt="Introduction to Artificial Intelligence - Infosys"
+            width="100%"
+            height="206"
+            onerror="
+              this.style.display='none';
+              this.nextElementSibling.style.display='flex';
+            "
+          >
+
+
+          <div
+            class="cert-placeholder"
+            style="display: none;"
+          >
+
+
+            <i
+              class="fa-solid fa-certificate"
+            ></i>
+
+
+            <span>
+
+              Certificate Preview
+
+            </span>
+
+
+            <small>
+
+              Paste image URL in
+              &lt;img src="..."&gt;
+
+            </small>
+
+
+          </div>
+
+        </div>
+
+
+        <span class="cert-issuer">
+
+          Infosys • Feb 2026
+
+        </span>
+
+
+        <h3
+          style="
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+          "
+        >
+
+          Introduction to Artificial Intelligence
+
+        </h3>
+
+
+        <p
+          style="
+            font-size: 0.88rem;
+            color: var(--text-muted);
+          "
+        >
+
+          Fundamental concepts of artificial
+          intelligence, machine intelligence,
+          and neural network foundations.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- CERTIFICATE 2 -->
+
+      <div class="card cert-card">
+
+
+        <div class="cert-img-box">
+
+
+          <img
+            src="saylor.jpeg"
+            alt="Introduction To Python - Saylor.org"
+            width="100%"
+            height="206"
+            onerror="
+              this.style.display='none';
+              this.nextElementSibling.style.display='flex';
+            "
+          >
+
+
+          <div
+            class="cert-placeholder"
+            style="display: none;"
+          >
+
+
+            <i
+              class="fa-brands fa-python"
+            ></i>
+
+
+            <span>
+
+              Certificate Preview
+
+            </span>
+
+
+            <small>
+
+              Paste image URL in
+              &lt;img src="..."&gt;
+
+            </small>
+
+
+          </div>
+
+        </div>
+
+
+        <span class="cert-issuer">
+
+          Saylor.org • Feb 2026
+
+        </span>
+
+
+        <h3
+          style="
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+          "
+        >
+
+          Introduction To Python
+
+        </h3>
+
+
+        <p
+          style="
+            font-size: 0.88rem;
+            color: var(--text-muted);
+          "
+        >
+
+          Core Python programming,
+          OOP principles, exception handling,
+          and standard data structure libraries.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- CERTIFICATE 3 -->
+
+      <div class="card cert-card">
+
+
+        <div class="cert-img-box">
+
+
+          <img
+             src="vedu.png"
+            alt="MOOC: Effective Time Management - TECH VEDU"
+            width="100%"
+            height="206"
+            onerror="
+              this.style.display='none';
+              this.nextElementSibling.style.display='flex';
+            "
+          >
+
+
+          <div
+            class="cert-placeholder"
+            style="display: none;"
+          >
+
+
+            <i
+              class="fa-solid fa-clock"
+            ></i>
+
+
+            <span>
+
+              Certificate Preview
+
+            </span>
+
+
+            <small>
+
+              Paste image URL in
+              &lt;img src="..."&gt;
+
+            </small>
+
+
+          </div>
+
+        </div>
+
+
+        <span class="cert-issuer">
+
+          TECH VEDU • Oct 2025
+
+        </span>
+
+
+        <h3
+          style="
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+          "
+        >
+
+          MOOC: Effective Time Management
+
+        </h3>
+
+
+        <p
+          style="
+            font-size: 0.88rem;
+            color: var(--text-muted);
+          "
+        >
+
+          Productivity frameworks,
+          task prioritization, sprint planning,
+          and agile workflow management.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= ACHIEVEMENTS ================= -->
+
+  <section id="achievements">
+
+
+    <h2 class="section-title">
+
+      <i
+        class="fa-solid fa-trophy"
+        style="color: #f59e0b;"
+      ></i>
+
+      Achievements & Hackathons
+
+    </h2>
+
+
+    <p class="section-desc">
+
+      Hackathons and competitive coding milestones.
+
+    </p>
+
+
+    <div class="grid-2">
+
+
+
+      <!-- ACHIEVEMENT 1 -->
+
+      <div class="card">
+
+
+        <h3 style="margin-bottom: 0.5rem;">
+
+          <i
+            class="fa-solid fa-code"
+            style="color: #38bdf8;"
+          ></i>
+
+          Algo Arena 2.0
+
+        </h3>
+
+
+        <span
+          class="project-tag"
+          style="
+            margin-bottom: 0.8rem;
+            display: inline-block;
+          "
+        >
+
+          Competitive Coding Event
+
+        </span>
+
+
+        <p
+          style="
+            font-size: 0.92rem;
+            color: var(--text-muted);
+          "
+        >
+
+          Participated in a (Algo Arena 2.0)
+          competitive coding event,
+          demonstrating problem-solving skills
+          and progressing to
+          <strong>Phase 2</strong>.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- ACHIEVEMENT 2 -->
+
+      <div class="card">
+
+
+        <h3 style="margin-bottom: 0.5rem;">
+
+          <i
+            class="fa-solid fa-laptop-code"
+            style="color: #f59e0b;"
+          ></i>
+
+          Code Caravan 3.0
+
+        </h3>
+
+
+        <span
+          class="project-tag"
+          style="
+            margin-bottom: 0.8rem;
+            display: inline-block;
+          "
+        >
+
+          Hackathon Participant
+
+        </span>
+
+
+        <p
+          style="
+            font-size: 0.92rem;
+            color: var(--text-muted);
+          "
+        >
+
+          Actively participated in a
+          Code Caravan 3.0 hackathon,
+          contributing to rapid project
+          development and demonstrating
+          teamwork and coding skills.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= CONTACT ================= -->
+
+  <section id="contact">
+
+
+    <h2 class="section-title">
+
+      <i
+        class="fa-solid fa-paper-plane"
+        style="color: #10b981;"
+      ></i>
+
+      Connect With Me
+
+    </h2>
+
+
+    <p class="section-desc">
+
+      Feel free to reach out directly via
+      email, phone, or social profiles.
+
+    </p>
+
+
+    <div class="contact-links">
+
+
+      <!-- EMAIL -->
+
+      <a
+        href="mailto:your-email@gmail.com"
+        class="contact-btn"
+      >
+
+        <i
+          class="fa-solid fa-envelope"
+          style="color: #38bdf8;"
+        ></i>
+
+        mridul5427h@gmail.com
+
+      </a>
+
+
+
+      <!-- PHONE -->
+
+      <a
+        href="tel:+910000000000"
+        class="contact-btn"
+      >
+
+        <i
+          class="fa-solid fa-phone"
+          style="color: #10b981;"
+        ></i>
+
+        +91 9015144838
+
+      </a>
+
+
+
+      <!-- LINKEDIN -->
+
+      <a
+        href="https://www.linkedin.com/in/mridul-sharma-640713398/"
+        target="_blank"
+        rel="noopener"
+        class="contact-btn"
+      >
+
+        <i
+          class="fa-brands fa-linkedin"
+          style="color: #0ea5e9;"
+        ></i>
+
+        LinkedIn Profile
+
+      </a>
+
+
+
+      <!-- GITHUB -->
+
+      <a
+        href="https://github.com/Mridul-Sharma04"
+        target="_blank"
+        rel="noopener"
+        class="contact-btn"
+      >
+
+        <i class="fa-brands fa-github"></i>
+
+        GitHub (Mridul-Sharma04)
+
+      </a>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <p>
+
+      &copy; 2026 Mridul Sharma •
+      B.Tech CSE (AI and ML) Portfolio
+
+    </p>
+
+  </footer>
+
+
+</body>
+
+</html>
