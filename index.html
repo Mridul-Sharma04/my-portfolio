@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Mridul Sharma | Portfolio</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts & FontAwesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-
     :root {
       --primary: #0066cc;
       --primary-dark: #004d99;
@@ -37,16 +30,14 @@
       --text-main: #f3f4f6;
       --text-muted: #9ca3af;
 
-      --gradient-title: linear-gradient(
-        135deg,
-        #38bdf8 0%,
-        #818cf8 50%,
-        #c084fc 100%
-      );
+      --gradient-title:
+        linear-gradient(
+          135deg,
+          #38bdf8 0%,
+          #818cf8 50%,
+          #c084fc 100%
+        );
     }
-
-
-    /* ---------------- GENERAL ---------------- */
 
     * {
       margin: 0;
@@ -55,7 +46,6 @@
       scroll-behavior: smooth;
     }
 
-
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background-color: var(--bg-dark);
@@ -63,13 +53,11 @@
       line-height: 1.6;
     }
 
-
     /* ---------------- NAVIGATION ---------------- */
 
     nav {
       background: rgba(11, 17, 32, 0.9);
       backdrop-filter: blur(12px);
-
       position: sticky;
       top: 0;
       z-index: 100;
@@ -83,31 +71,24 @@
       padding: 1rem 5%;
     }
 
-
     nav .brand {
       font-family: 'Fira Code', monospace;
       font-weight: 700;
       font-size: 1.25rem;
 
       color: #38bdf8;
-
       text-decoration: none;
     }
 
-
     nav ul {
       list-style: none;
-
       display: flex;
       gap: 1.5rem;
-
       align-items: center;
     }
 
-
     nav ul li a {
       color: var(--text-muted);
-
       text-decoration: none;
 
       font-weight: 500;
@@ -116,56 +97,45 @@
       transition: color 0.3s;
     }
 
-
     nav ul li a:hover {
       color: #38bdf8;
     }
 
-
     .btn-contact {
-      background: linear-gradient(
-        135deg,
-        #0284c7,
-        #6366f1
-      );
+      background: linear-gradient(135deg, #0284c7, #6366f1);
 
       color: white !important;
 
       padding: 0.5rem 1.2rem;
-
       border-radius: 20px;
 
       font-weight: 600;
-
       text-decoration: none;
 
       transition: transform 0.2s;
     }
 
-
     .btn-contact:hover {
       transform: translateY(-2px);
     }
 
-
     /* ---------------- HERO SECTION ---------------- */
 
     .hero {
-      padding: 5rem 5% 4rem;
+      padding: 4rem 5% 4rem;
 
       text-align: center;
 
-      background: radial-gradient(
-        circle at center top,
-        #1e293b 0%,
-        var(--bg-dark) 70%
-      );
+      background:
+        radial-gradient(
+          circle at center top,
+          #1e293b 0%,
+          var(--bg-dark) 70%
+        );
     }
-
 
     .badge-student {
       display: inline-flex;
-
       align-items: center;
 
       gap: 0.5rem;
@@ -181,12 +151,38 @@
       border-radius: 30px;
 
       font-size: 0.85rem;
-
       font-weight: 600;
 
       margin-bottom: 1.2rem;
     }
 
+    /* ---------------- PROFILE PHOTO ---------------- */
+
+    .profile-photo {
+      width: 140px;
+      height: 140px;
+
+      object-fit: cover;
+
+      border-radius: 50%;
+
+      border: 4px solid rgba(56, 189, 248, 0.5);
+
+      box-shadow:
+        0 0 25px rgba(56, 189, 248, 0.2);
+
+      display: block;
+
+      margin: 0 auto 1.5rem;
+
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.05);
+
+      border-color: #38bdf8;
+    }
 
     .hero h1 {
       font-size: 3.2rem;
@@ -196,23 +192,20 @@
       background: var(--gradient-title);
 
       -webkit-background-clip: text;
-
       -webkit-text-fill-color: transparent;
 
       margin-bottom: 0.5rem;
     }
-
 
     .hero p.tagline {
       font-size: 1.25rem;
 
       color: #94a3b8;
 
-      max-width: 700px;
+      max-width: 800px;
 
       margin: 0 auto 2rem;
     }
-
 
     .metrics-row {
       display: flex;
@@ -226,7 +219,6 @@
       margin-bottom: 2.5rem;
     }
 
-
     .metric-chip {
       background: var(--bg-card);
 
@@ -239,17 +231,14 @@
       font-size: 0.9rem;
 
       display: flex;
-
       align-items: center;
 
       gap: 0.5rem;
     }
 
-
     .metric-chip i {
       color: #38bdf8;
     }
-
 
     /* ---------------- SECTION COMMON ---------------- */
 
@@ -260,7 +249,6 @@
 
       margin: 0 auto;
     }
-
 
     .section-title {
       font-size: 2rem;
@@ -278,13 +266,11 @@
       gap: 0.75rem;
     }
 
-
     .section-desc {
       color: var(--text-muted);
 
       margin-bottom: 2.5rem;
     }
-
 
     /* ---------------- GRID & CARDS ---------------- */
 
@@ -297,7 +283,6 @@
       gap: 2rem;
     }
 
-
     .grid-3 {
       display: grid;
 
@@ -306,7 +291,6 @@
 
       gap: 1.5rem;
     }
-
 
     .card {
       background: var(--bg-card);
@@ -322,14 +306,12 @@
         border-color 0.3s;
     }
 
-
     .card:hover {
       transform: translateY(-4px);
 
       border-color:
         rgba(56, 189, 248, 0.4);
     }
-
 
     /* ---------------- EDUCATION TIMELINE ---------------- */
 
@@ -343,7 +325,6 @@
       position: relative;
     }
 
-
     .timeline-item::before {
       content: '';
 
@@ -354,14 +335,12 @@
       top: 4px;
 
       width: 12px;
-
       height: 12px;
 
       border-radius: 50%;
 
       background: #38bdf8;
     }
-
 
     .timeline-date {
       font-size: 0.85rem;
@@ -373,7 +352,6 @@
       font-family: 'Fira Code', monospace;
     }
 
-
     .timeline-school {
       font-size: 1.15rem;
 
@@ -382,14 +360,12 @@
       margin-top: 0.2rem;
     }
 
-
     .pill-score {
       display: inline-block;
 
       margin-top: 0.4rem;
 
-      background:
-        rgba(16, 185, 129, 0.15);
+      background: rgba(16, 185, 129, 0.15);
 
       color: #34d399;
 
@@ -405,13 +381,11 @@
       font-weight: 600;
     }
 
-
     /* ---------------- SKILLS ---------------- */
 
     .skill-category {
       margin-bottom: 1.5rem;
     }
-
 
     .skill-category h4 {
       color: #38bdf8;
@@ -425,7 +399,6 @@
       letter-spacing: 1px;
     }
 
-
     .tags-container {
       display: flex;
 
@@ -433,7 +406,6 @@
 
       gap: 0.6rem;
     }
-
 
     .tag {
       background:
@@ -461,7 +433,6 @@
         border-color 0.2s;
     }
 
-
     .tag:hover {
       background:
         rgba(56, 189, 248, 0.15);
@@ -469,7 +440,6 @@
       border-color:
         rgba(56, 189, 248, 0.4);
     }
-
 
     /* ---------------- PROJECTS ---------------- */
 
@@ -480,7 +450,6 @@
 
       margin-bottom: 0.8rem;
     }
-
 
     .project-tag {
       font-family: 'Fira Code', monospace;
@@ -497,7 +466,6 @@
       border-radius: 4px;
     }
 
-
     .project-date {
       float: right;
 
@@ -505,7 +473,6 @@
 
       color: var(--text-muted);
     }
-
 
     .project-list {
       list-style: none;
@@ -519,7 +486,6 @@
       gap: 0.5rem;
     }
 
-
     .project-list li {
       font-size: 0.9rem;
 
@@ -530,7 +496,6 @@
       padding-left: 1.2rem;
     }
 
-
     .project-list li::before {
       content: '▹';
 
@@ -540,7 +505,6 @@
 
       color: #38bdf8;
     }
-
 
     /* ---------------- CERTIFICATES ---------------- */
 
@@ -553,7 +517,6 @@
 
       align-items: center;
     }
-
 
     .cert-img-box {
       width: 100%;
@@ -580,20 +543,16 @@
 
       padding: 6px;
 
-      box-sizing: border-box;
-
-      transition: border-color 0.3s;
+      transition:
+        border-color 0.3s;
     }
-
 
     .cert-card:hover .cert-img-box {
       border-color: #38bdf8;
     }
 
-
     .cert-img-box img {
       width: 100%;
-
       height: 100%;
 
       max-height: 206px;
@@ -606,14 +565,13 @@
 
       display: block;
 
-      transition: transform 0.3s ease;
+      transition:
+        transform 0.3s ease;
     }
-
 
     .cert-card:hover .cert-img-box img {
       transform: scale(1.03);
     }
-
 
     .cert-placeholder {
       display: flex;
@@ -631,13 +589,11 @@
       padding: 1rem;
     }
 
-
     .cert-placeholder i {
       font-size: 2.2rem;
 
       color: #38bdf8;
     }
-
 
     .cert-placeholder span {
       font-size: 0.95rem;
@@ -647,7 +603,6 @@
       color: var(--text-main);
     }
 
-
     .cert-placeholder small {
       font-size: 0.78rem;
 
@@ -655,7 +610,6 @@
 
       font-family: 'Fira Code', monospace;
     }
-
 
     .cert-issuer {
       display: inline-block;
@@ -676,7 +630,6 @@
       margin-bottom: 0.5rem;
     }
 
-
     /* ---------------- CONTACT ---------------- */
 
     .contact-links {
@@ -688,7 +641,6 @@
 
       margin-top: 1.5rem;
     }
-
 
     .contact-btn {
       background: var(--bg-card);
@@ -713,7 +665,6 @@
       transition: all 0.3s;
     }
 
-
     .contact-btn:hover {
       border-color: #38bdf8;
 
@@ -722,7 +673,6 @@
 
       transform: translateY(-2px);
     }
-
 
     /* ---------------- FOOTER ---------------- */
 
@@ -739,7 +689,6 @@
       font-size: 0.9rem;
     }
 
-
     /* ---------------- MOBILE ---------------- */
 
     @media (max-width: 768px) {
@@ -748,19 +697,19 @@
         font-size: 2.3rem;
       }
 
+      .profile-photo {
+        width: 120px;
+        height: 120px;
+      }
+
       nav ul {
         display: none;
       }
-
     }
-
   </style>
-
 </head>
 
-
 <body>
-
 
   <!-- ================= NAVIGATION ================= -->
 
@@ -773,33 +722,23 @@
     <ul>
 
       <li>
-        <a href="#about">
-          About & Edu
-        </a>
+        <a href="#about">About & Edu</a>
       </li>
 
       <li>
-        <a href="#skills">
-          Skills
-        </a>
+        <a href="#skills">Skills</a>
       </li>
 
       <li>
-        <a href="#projects">
-          Projects
-        </a>
+        <a href="#projects">Projects</a>
       </li>
 
       <li>
-        <a href="#certificates">
-          Certificates
-        </a>
+        <a href="#certificates">Certificates</a>
       </li>
 
       <li>
-        <a href="#achievements">
-          Achievements
-        </a>
+        <a href="#achievements">Achievements</a>
       </li>
 
       <li>
@@ -813,8 +752,7 @@
   </nav>
 
 
-
-  <!-- ================= HERO ================= -->
+  <!-- ================= HERO SECTION ================= -->
 
   <header class="hero">
 
@@ -827,6 +765,15 @@
     </div>
 
 
+    <!-- YOUR PHOTO -->
+
+    <img
+      src="photo.jpeg"
+      alt="Mridul Sharma"
+      class="profile-photo"
+    >
+
+
     <h1>
       Hello, I'm Mridul Sharma
     </h1>
@@ -834,17 +781,14 @@
 
     <p class="tagline">
 
-      Flutter & Dart Mobile Developer |
+      Aspiring Software Engineer | 
       Python & C++ Programmer |
-      Smart Automation Enthusiast
+      AI & ML Enthusiast
 
     </p>
 
 
     <div class="metrics-row">
-
-
-      <!-- CGPA -->
 
       <div class="metric-chip">
 
@@ -856,8 +800,6 @@
       </div>
 
 
-      <!-- 12th -->
-
       <div class="metric-chip">
 
         <i class="fa-solid fa-award"></i>
@@ -867,8 +809,6 @@
 
       </div>
 
-
-      <!-- Projects -->
 
       <div class="metric-chip">
 
@@ -880,8 +820,6 @@
       </div>
 
 
-      <!-- Certifications -->
-
       <div class="metric-chip">
 
         <i class="fa-solid fa-certificate"></i>
@@ -891,24 +829,21 @@
 
       </div>
 
-
     </div>
 
   </header>
-
 
 
   <!-- ================= ABOUT & EDUCATION ================= -->
 
   <section id="about">
 
-
     <h2 class="section-title">
 
       <i
         class="fa-solid fa-user-graduate"
-        style="color: #38bdf8;">
-      </i>
+        style="color: #38bdf8;"
+      ></i>
 
       About & Education
 
@@ -929,11 +864,8 @@
 
       <div class="card">
 
-
         <h3 style="margin-bottom: 1rem;">
-
           Who I Am
-
         </h3>
 
 
@@ -949,9 +881,9 @@
           at <strong>Lovely Professional University,
           Phagwara</strong>.
 
-          Passionate about cross-platform app
-          development, algorithms in C++, and
-          intelligent hardware automation.
+          I am passionate about programming,
+          mobile application development,
+          algorithms, and intelligent automation.
 
         </p>
 
@@ -964,14 +896,11 @@
             text-transform: uppercase;
           "
         >
-
           Soft Skills
-
         </h4>
 
 
         <div class="tags-container">
-
 
           <span class="tag">
 
@@ -1008,34 +937,24 @@
 
           </span>
 
-
         </div>
 
       </div>
-
 
 
       <!-- EDUCATION -->
 
       <div class="card">
 
-
         <h3 style="margin-bottom: 1.2rem;">
-
           Education Timeline
-
         </h3>
 
 
-        <!-- LPU -->
-
         <div class="timeline-item">
 
-
           <span class="timeline-date">
-
             Aug 2025 – Present
-
           </span>
 
 
@@ -1060,25 +979,16 @@
 
 
           <span class="pill-score">
-
             CGPA: 8.2
-
           </span>
-
 
         </div>
 
 
-
-        <!-- 12TH -->
-
         <div class="timeline-item">
 
-
           <span class="timeline-date">
-
             Mar 2024 – May 2025
-
           </span>
 
 
@@ -1096,35 +1006,26 @@
             "
           >
 
-            Intermediate (PCM) • Una,
-            Himachal Pradesh
+            Intermediate (PCM) •
+            Una, Himachal Pradesh
 
           </p>
 
 
           <span class="pill-score">
-
             Percentage: 90%
-
           </span>
-
 
         </div>
 
-
-
-        <!-- 10TH -->
 
         <div
           class="timeline-item"
           style="margin-bottom: 0;"
         >
 
-
           <span class="timeline-date">
-
             Mar 2022 – May 2023
-
           </span>
 
 
@@ -1142,21 +1043,17 @@
             "
           >
 
-            Matriculation • Una,
-            Himachal Pradesh
+            Matriculation •
+            Una, Himachal Pradesh
 
           </p>
 
 
           <span class="pill-score">
-
             Percentage: 97%
-
           </span>
 
-
         </div>
-
 
       </div>
 
@@ -1165,11 +1062,9 @@
   </section>
 
 
-
   <!-- ================= SKILLS ================= -->
 
   <section id="skills">
-
 
     <h2 class="section-title">
 
@@ -1185,8 +1080,7 @@
 
     <p class="section-desc">
 
-      Languages, technologies, and developer tools
-      from my CV.
+      Languages, technologies, and developer tools.
 
     </p>
 
@@ -1194,143 +1088,95 @@
     <div class="card">
 
 
-      <!-- PROGRAMMING LANGUAGES -->
-
       <div class="skill-category">
 
-
         <h4>
-
           Programming Languages
-
         </h4>
 
 
         <div class="tags-container">
 
-
           <span class="tag">
-
             <i class="fa-solid fa-code"></i>
-
             C++
-
           </span>
 
 
           <span class="tag">
-
             <i class="fa-brands fa-python"></i>
-
             Python
-
           </span>
 
 
           <span class="tag">
-
             <i class="fa-solid fa-terminal"></i>
-
             C
-
           </span>
 
 
           <span class="tag">
-
             <i class="fa-brands fa-js"></i>
-
             JavaScript
-
           </span>
 
 
           <span class="tag">
-
             <i class="fa-solid fa-mobile-screen"></i>
-
             DART
-
           </span>
-
 
         </div>
 
       </div>
 
 
-
-      <!-- TECHNOLOGIES -->
-
       <div
         class="skill-category"
         style="margin-bottom: 0;"
       >
 
-
         <h4>
-
           Technologies & Frameworks
-
         </h4>
 
 
         <div class="tags-container">
 
-
           <span class="tag">
-
             <i class="fa-solid fa-database"></i>
-
             SQL
-
           </span>
 
 
           <span class="tag">
-
             <i class="fa-brands fa-git-alt"></i>
-
             Git
-
           </span>
 
 
           <span class="tag">
-
             <i class="fa-brands fa-github"></i>
-
             GitHub
-
           </span>
 
 
           <span class="tag">
-
             <i class="fa-brands fa-html5"></i>
-
             HTML5
-
           </span>
 
 
           <span class="tag">
-
             <i class="fa-brands fa-css3-alt"></i>
-
             CSS3
-
           </span>
 
 
           <span class="tag">
-
             <i class="fa-solid fa-layer-group"></i>
-
             Flutter
-
           </span>
-
 
         </div>
 
@@ -1341,11 +1187,9 @@
   </section>
 
 
-
   <!-- ================= PROJECTS ================= -->
 
   <section id="projects">
-
 
     <h2 class="section-title">
 
@@ -1369,194 +1213,137 @@
     <div class="grid-3">
 
 
-
       <!-- PROJECT 1 -->
 
       <div class="card project-card">
 
-
         <span class="project-tag">
-
-          HTML / CSS / JavaScript
-
+          Python
         </span>
 
 
         <span class="project-date">
-
           2026
-
         </span>
 
 
         <h3>
-
-          To-Do List App
-
+          Student Grade Calculator
         </h3>
 
 
         <ul class="project-list">
 
-
           <li>
-
-            Simple task management application
-            for adding, editing, and deleting
-            daily tasks.
-
+            Created a simple Python program
+            to calculate student grades based
+            on marks entered by the user.
           </li>
 
-
           <li>
-
-            Users can mark tasks as completed
-            and keep track of their pending
-            activities.
-
+            Added basic input validation and
+            percentage calculation.
           </li>
 
-
           <li>
-
-            Built with a clean and responsive
-            interface using basic web
-            development technologies.
-
+            Designed the project to practice
+            Python fundamentals and conditional
+            statements.
           </li>
-
 
         </ul>
 
       </div>
-
 
 
       <!-- PROJECT 2 -->
 
       <div class="card project-card">
 
-
         <span class="project-tag">
-
           ECE / C++ & Python
-
         </span>
 
 
         <span class="project-date">
-
           Mar 2026
-
         </span>
 
 
         <h3>
-
           Smart Rooftop
-
         </h3>
 
 
         <ul class="project-list">
 
-
           <li>
-
-            Automated device control
-            (lights/fans) using real-time
-            sensor logic to improve energy
-            efficiency.
-
+            Developed a smart rooftop system
+            using sensors to monitor environmental
+            conditions.
           </li>
 
-
           <li>
-
-            Web/mobile interface data
-            visualization and monitoring
-            dashboard.
-
+            Designed real-time monitoring and
+            automated decision-making based on
+            sensor inputs.
           </li>
 
-
           <li>
-
-            Software logic developed with
-            C/C++ and Python for sensor
-            integration and real-time decisions.
-
+            Used C/C++ and Python for sensor
+            integration and data processing.
           </li>
-
 
         </ul>
 
       </div>
-
 
 
       <!-- PROJECT 3 -->
 
       <div class="card project-card">
 
-
         <span class="project-tag">
-
           Python
-
         </span>
 
 
         <span class="project-date">
-
           Sep 2025 – Feb 2026
-
         </span>
 
 
         <h3>
-
           Python Mini Projects Suite
-
         </h3>
 
 
         <ul class="project-list">
 
-
           <li>
-
             Password generator creating secure
             random passwords using built-in
             libraries.
-
           </li>
-
 
           <li>
-
             Arithmetic calculator with
-            comprehensive error handling
-            for arithmetic operations.
-
+            comprehensive error handling for
+            arithmetic operations.
           </li>
-
 
         </ul>
 
       </div>
-
 
     </div>
 
   </section>
 
 
-
-  <!-- ================= CERTIFICATIONS ================= -->
+  <!-- ================= CERTIFICATES ================= -->
 
   <section id="certificates">
-
 
     <h2 class="section-title">
 
@@ -1572,8 +1359,7 @@
 
     <p class="section-desc">
 
-      Official course certifications with
-      dedicated image frames.
+      Official course certifications.
 
     </p>
 
@@ -1581,20 +1367,15 @@
     <div class="grid-3">
 
 
-
-      <!-- CERTIFICATE 1 -->
+      <!-- CERTIFICATE 1 - INFOSYS -->
 
       <div class="card cert-card">
 
-
         <div class="cert-img-box">
-
 
           <img
             src="infosys.png"
             alt="Introduction to Artificial Intelligence - Infosys"
-            width="100%"
-            height="206"
             onerror="
               this.style.display='none';
               this.nextElementSibling.style.display='flex';
@@ -1607,26 +1388,15 @@
             style="display: none;"
           >
 
-
-            <i
-              class="fa-solid fa-certificate"
-            ></i>
-
+            <i class="fa-solid fa-certificate"></i>
 
             <span>
-
               Certificate Preview
-
             </span>
 
-
             <small>
-
-              Paste image URL in
-              &lt;img src="..."&gt;
-
+              infosys.png
             </small>
-
 
           </div>
 
@@ -1634,9 +1404,7 @@
 
 
         <span class="cert-issuer">
-
           Infosys • Feb 2026
-
         </span>
 
 
@@ -1646,9 +1414,7 @@
             margin-bottom: 0.5rem;
           "
         >
-
           Introduction to Artificial Intelligence
-
         </h3>
 
 
@@ -1668,20 +1434,15 @@
       </div>
 
 
-
-      <!-- CERTIFICATE 2 -->
+      <!-- CERTIFICATE 2 - SAYLOR -->
 
       <div class="card cert-card">
 
-
         <div class="cert-img-box">
-
 
           <img
             src="saylor.jpeg"
             alt="Introduction To Python - Saylor.org"
-            width="100%"
-            height="206"
             onerror="
               this.style.display='none';
               this.nextElementSibling.style.display='flex';
@@ -1694,26 +1455,15 @@
             style="display: none;"
           >
 
-
-            <i
-              class="fa-brands fa-python"
-            ></i>
-
+            <i class="fa-brands fa-python"></i>
 
             <span>
-
               Certificate Preview
-
             </span>
 
-
             <small>
-
-              Paste image URL in
-              &lt;img src="..."&gt;
-
+              saylor.jpeg
             </small>
-
 
           </div>
 
@@ -1721,9 +1471,7 @@
 
 
         <span class="cert-issuer">
-
           Saylor.org • Feb 2026
-
         </span>
 
 
@@ -1733,9 +1481,7 @@
             margin-bottom: 0.5rem;
           "
         >
-
           Introduction To Python
-
         </h3>
 
 
@@ -1746,29 +1492,24 @@
           "
         >
 
-          Core Python programming,
-          OOP principles, exception handling,
-          and standard data structure libraries.
+          Core Python programming, OOP principles,
+          exception handling, and standard data
+          structure libraries.
 
         </p>
 
       </div>
 
 
-
-      <!-- CERTIFICATE 3 -->
+      <!-- CERTIFICATE 3 - TECH VEDU -->
 
       <div class="card cert-card">
 
-
         <div class="cert-img-box">
 
-
           <img
-             src="vedu.png"
+            src="vedu.png"
             alt="MOOC: Effective Time Management - TECH VEDU"
-            width="100%"
-            height="206"
             onerror="
               this.style.display='none';
               this.nextElementSibling.style.display='flex';
@@ -1781,26 +1522,15 @@
             style="display: none;"
           >
 
-
-            <i
-              class="fa-solid fa-clock"
-            ></i>
-
+            <i class="fa-solid fa-clock"></i>
 
             <span>
-
               Certificate Preview
-
             </span>
 
-
             <small>
-
-              Paste image URL in
-              &lt;img src="..."&gt;
-
+              vedu.png
             </small>
-
 
           </div>
 
@@ -1808,9 +1538,7 @@
 
 
         <span class="cert-issuer">
-
           TECH VEDU • Oct 2025
-
         </span>
 
 
@@ -1820,9 +1548,7 @@
             margin-bottom: 0.5rem;
           "
         >
-
           MOOC: Effective Time Management
-
         </h3>
 
 
@@ -1833,25 +1559,22 @@
           "
         >
 
-          Productivity frameworks,
-          task prioritization, sprint planning,
+          Productivity frameworks, task
+          prioritization, sprint planning,
           and agile workflow management.
 
         </p>
 
       </div>
 
-
     </div>
 
   </section>
 
 
-
   <!-- ================= ACHIEVEMENTS ================= -->
 
   <section id="achievements">
-
 
     <h2 class="section-title">
 
@@ -1867,7 +1590,7 @@
 
     <p class="section-desc">
 
-      Hackathons and competitive coding milestones.
+      Competitive coding and development milestones.
 
     </p>
 
@@ -1875,13 +1598,13 @@
     <div class="grid-2">
 
 
-
       <!-- ACHIEVEMENT 1 -->
 
       <div class="card">
 
-
-        <h3 style="margin-bottom: 0.5rem;">
+        <h3
+          style="margin-bottom: 0.5rem;"
+        >
 
           <i
             class="fa-solid fa-code"
@@ -1900,9 +1623,7 @@
             display: inline-block;
           "
         >
-
           Competitive Coding Event
-
         </span>
 
 
@@ -1913,31 +1634,29 @@
           "
         >
 
-          Participated in a (Algo Arena 2.0)
-          competitive coding event,
+          Participated in Algo Arena 2.0,
           demonstrating problem-solving skills
-          and progressing to
-          <strong>Phase 2</strong>.
+          and progressing to Phase 2.
 
         </p>
 
       </div>
 
 
-
       <!-- ACHIEVEMENT 2 -->
 
       <div class="card">
 
-
-        <h3 style="margin-bottom: 0.5rem;">
+        <h3
+          style="margin-bottom: 0.5rem;"
+        >
 
           <i
             class="fa-solid fa-laptop-code"
             style="color: #f59e0b;"
           ></i>
 
-          Code Caravan 3.0
+          Community Development Project
 
         </h3>
 
@@ -1949,9 +1668,7 @@
             display: inline-block;
           "
         >
-
-          Hackathon Participant
-
+          Community Service
         </span>
 
 
@@ -1962,27 +1679,23 @@
           "
         >
 
-          Actively participated in a
-          Code Caravan 3.0 hackathon,
-          contributing to rapid project
-          development and demonstrating
-          teamwork and coding skills.
+          Completed a Community Development
+          Project with the Times Foundation
+          in collaboration with Lovely
+          Professional University.
 
         </p>
 
       </div>
-
 
     </div>
 
   </section>
 
 
-
   <!-- ================= CONTACT ================= -->
 
   <section id="contact">
-
 
     <h2 class="section-title">
 
@@ -2010,7 +1723,7 @@
       <!-- EMAIL -->
 
       <a
-        href="mailto:your-email@gmail.com"
+        href="mailto:mridul5427h@gmail.com"
         class="contact-btn"
       >
 
@@ -2024,11 +1737,10 @@
       </a>
 
 
-
       <!-- PHONE -->
 
       <a
-        href="tel:+910000000000"
+        href="tel:+919015144838"
         class="contact-btn"
       >
 
@@ -2040,7 +1752,6 @@
         +91 9015144838
 
       </a>
-
 
 
       <!-- LINKEDIN -->
@@ -2062,7 +1773,6 @@
       </a>
 
 
-
       <!-- GITHUB -->
 
       <a
@@ -2078,11 +1788,9 @@
 
       </a>
 
-
     </div>
 
   </section>
-
 
 
   <!-- ================= FOOTER ================= -->
@@ -2090,15 +1798,11 @@
   <footer>
 
     <p>
-
       &copy; 2026 Mridul Sharma •
-      B.Tech CSE (AI and ML) Portfolio
-
+      B.Tech Computer Science & Engineering Portfolio
     </p>
 
   </footer>
 
-
 </body>
-
 </html>
